@@ -1,0 +1,73 @@
+export const DEFAULT_CONFIG = [
+  // {
+  //   offset: 0,
+  //   limit: 5,
+  //   category_id: 15,
+  //   region_id: 2,
+  //   district_id: 353, // Mokotów
+  //   city_id: 17871,
+  //   'filter_float_m:from': 35,
+  //   'filter_float_price:to': 3300,
+  //   'filter_enum_rooms[0]': 'two',
+  //   filter_refiners: 'spell_checker',
+  // },
+  // {
+  //   offset: 0,
+  //   limit: 5,
+  //   category_id: 15,
+  //   region_id: 2,
+  //   district_id: 375, // Wilanów
+  //   city_id: 17871,
+  //   'filter_float_m:from': 35,
+  //   'filter_float_price:to': 3300,
+  //   'filter_enum_rooms[0]': 'two',
+  //   filter_refiners: 'spell_checker',
+  // },
+  // {
+  //   offset: 0,
+  //   limit: 5,
+  //   category_id: 15,
+  //   region_id: 2,
+  //   district_id: 373, // Ursynów
+  //   city_id: 17871,
+  //   'filter_float_m:from': 35,
+  //   'filter_float_price:to': 3300,
+  //   'filter_enum_rooms[0]': 'two',
+  //   filter_refiners: 'spell_checker',
+  // },
+  // {
+  //   offset: 0,
+  //   limit: 5,
+  //   category_id: 15,
+  //   region_id: 2,
+  //   district_id: 355, // Ochota
+  //   city_id: 17871,
+  //   'filter_float_m:from': 35,
+  //   'filter_float_price:to': 3300,
+  //   'filter_enum_rooms[0]': 'two',
+  //   filter_refiners: 'spell_checker',
+  // },
+  // {
+  //   offset: 0,
+  //   limit: 5,
+  //   category_id: 15,
+  //   region_id: 2,
+  //   district_id: 381, // Praga Południe
+  //   city_id: 17871,
+  //   'filter_float_m:from': 35,
+  //   'filter_float_price:to': 3300,
+  //   'filter_enum_rooms[0]': 'two',
+  //   filter_refiners: 'spell_checker',
+  // },
+  {
+    offset: 0,
+    limit: 5,
+    category_id: 15,
+    region_id: 2,
+    city_id: 17871,
+    'filter_float_m:from': 35,
+    'filter_float_price:to': 3300,
+    'filter_enum_rooms[0]': 'two',
+    filter_refiners: 'spell_checker',
+  },
+]
