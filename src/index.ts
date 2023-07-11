@@ -1,6 +1,7 @@
 import { Telegraf } from 'telegraf'
 import schedule from 'node-schedule'
 import isToday from 'date-fns/isToday'
+import format from 'date-fns/format'
 
 import { APARTMENT_IDS, JOBS } from './db'
 import { getOffers } from './api'
@@ -16,6 +17,8 @@ bot.command('start', async (ctx) => {
   APARTMENT_IDS[chatReferenceId] = []
 
   JOBS[chatReferenceId] = schedule.scheduleJob('*/2 * * * *', async () => {
+    const now = format(new Date(), 'dd MMM yyyy, HH:mm')
+
     try {
       const responses = await Promise.all(DEFAULT_CONFIG.map(getOffers))
 
@@ -46,13 +49,13 @@ bot.command('start', async (ctx) => {
         const totalPrice = price + Number(rent)
 
         if (desc.includes('okazjonaln')) {
-          console.log('Skipped because of the: Najem okazjonalny')
+          console.log(`${now}: apartment skipped because of the occasional rent`)
 
           continue
         }
 
         if (totalPrice > 3500) {
-          console.log(`Skipped because of the price: ${totalPrice}`)
+          console.log(`${now}: apartment skipped because of the price ${totalPrice}`)
 
           continue
         }
