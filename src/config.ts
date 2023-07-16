@@ -61,7 +61,7 @@ export const DEFAULT_CONFIG = [
   // },
   {
     offset: 0,
-    limit: 5,
+    limit: 10,
     category_id: 15,
     region_id: 2,
     city_id: 17871,

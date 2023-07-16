@@ -54,7 +54,7 @@ bot.command('start', async (ctx) => {
           continue
         }
 
-        if (totalPrice > 3500) {
+        if (totalPrice > 3600) {
           console.log(`${now}: apartment skipped because of the price ${totalPrice}`)
 
           continue
