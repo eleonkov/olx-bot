@@ -38,13 +38,12 @@ bot.command('start', async (ctx) => {
         const link = latestApartment.url
         const desc = latestApartment.description
         const district = latestApartment.location?.district?.name
-        const isFromAugust = desc.includes('1.08') || desc.includes('od sierpnia') || desc.includes('od 1 sierpnia')
 
         const rent = latestApartment.params?.find((param) => param.key === 'rent')?.value?.key || 0
         const price = latestApartment.params?.find((param) => param.key === 'price')?.value?.value || 0
         const m = latestApartment.params?.find((param) => param.key === 'm')?.value?.key
 
-        const message = `📍${district}, ${price}/${rent} PLN, ${m}м²${isFromAugust ? ' (from 01.08)' : ''}`
+        const message = `📍${district}, ${price}/${rent} PLN, ${m}м²`
 
         const totalPrice = price + Number(rent)
 
