@@ -64,8 +64,6 @@ bot.command('start', async (ctx) => {
 
       APARTMENT_IDS[chatReferenceId] = [...APARTMENT_IDS[chatReferenceId], ...latestApartments.map((a) => a.id)]
     } catch (error) {
-      console.log('Error: ', error)
-
       await ctx.telegram.sendMessage(chatReferenceId, 'Something wrong..')
 
       return
