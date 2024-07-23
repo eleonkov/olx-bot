@@ -53,7 +53,7 @@ bot.command('start', async (ctx) => {
           continue
         }
 
-        if (totalPrice > 3600) {
+        if (totalPrice > 4000) {
           console.log(`${now}: apartment skipped because of the price ${totalPrice}`)
 
           continue
@@ -64,7 +64,7 @@ bot.command('start', async (ctx) => {
 
       APARTMENT_IDS[chatReferenceId] = [...APARTMENT_IDS[chatReferenceId], ...latestApartments.map((a) => a.id)]
     } catch (error) {
-      await ctx.telegram.sendMessage(chatReferenceId, 'Something wrong..')
+      console.log(`${now}: something went wrong`)
 
       return
     }
